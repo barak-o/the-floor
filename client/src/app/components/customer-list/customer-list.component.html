@@ -1,0 +1,43 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Customer Number</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let customer of customers; index as i">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ customer.number }}</td>
+      <td>
+        <a
+          class="nav-link"
+          [routerLink]="['/customer/view', customer._id]"
+          routerLinkActive="active"
+          >{{ customer.name }}</a
+        >
+      </td>
+      <td>{{ customer.address }}</td>
+      <td>{{ customer.phone }}</td>
+      <td>
+        <button (click)="deleteCustomer(customer._id)" class="btn btn-danger">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <span class="nav-item active">
+    <a
+      class="nav-link"
+      routerLink="/customer/create"
+      [queryParams]="{ edit: 1 }"
+      routerLinkActive="active"
+      >Customer Create</a
+    >
+  </span>
+</div>
