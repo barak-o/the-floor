@@ -2,7 +2,7 @@
   "name": "nest-customers-api",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "barak orpeli",
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
