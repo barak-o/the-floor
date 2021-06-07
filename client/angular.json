@@ -24,7 +24,7 @@
             "es5BrowserSupport": true
           },
           "configurations": {
-            "customerion": {
+            "production": {
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -56,8 +56,8 @@
             "browserTarget": "client:build"
           },
           "configurations": {
-            "customerion": {
-              "browserTarget": "client:build:customerion"
+            "production": {
+              "browserTarget": "client:build:production"
             }
           }
         },
@@ -100,8 +100,8 @@
             "devServerTarget": "client:serve"
           },
           "configurations": {
-            "customerion": {
-              "devServerTarget": "client:serve:customerion"
+            "production": {
+              "devServerTarget": "client:serve:production"
             }
           }
         },
